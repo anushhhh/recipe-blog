@@ -1,14 +1,16 @@
 :root{
-    --bs-font-sans-serif: 'Rubik', sans-serif;
+    --bs-font-sans-serif: 'Lora', sans-serif;
 }
 
 .container-xxl {
     max-width: 80%;
+    background-color: #fff6f4;
+    color: #74402d;
 }
 
 body{
     background-image: url("/img/i-like-food.svg");
-    background-color: rgb(243, 243, 243);
+    background-color: #fff6f4;
 }
 
 a{
@@ -48,5 +50,10 @@ a{
     object-fit: cover;
 }
 
+.btn{
+    background-color: #C1536B;
+    border: none;
+    border-radius: 15px;
+}
 /*Latest Recipies*/
 

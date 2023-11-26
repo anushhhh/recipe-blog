@@ -27,4 +27,6 @@ const recipeSchema = new mongoose.Schema({
     }
 });
 
+recipeSchema.index({ name: 'text', description: 'text', ingredients: 'text' });
+
 module.exports = mongoose.model('Recipe', recipeSchema);

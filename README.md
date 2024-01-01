@@ -13,7 +13,7 @@ Welcome to my collection of delicious recipes! 🍽️👩‍🍳 This blog is d
   - **Contact Form with Email Notifications:** Enabled communication with users with owner recieving email notifications for each inquiry and feedback.
   - **Random Recipe Generator:** A fun feature for users to explore new dishes.
   - **Robust Search Functionality:** Facilitated easy recipe discovery through a powerful search mechanism.
-  - 
+    
   <img width="945" alt="image" src="https://github.com/anushhhh/recipe-blog/assets/92623929/5631512f-6620-4fc5-bd60-4deaa3e6fde2">
 
 # Run This Project

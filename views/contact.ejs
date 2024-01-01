@@ -1,0 +1,45 @@
+<div class="px-4 py-2 my-5 text-center">
+    <h1 class="display-5 fw-bold">Contact Us</h1>
+    <div class="col-lg-9 mx-auto">
+        <p class="lead">
+            Welcome to our flavorful kitchen! Have a question, craving, or a suggestion to share? Reach out - let's whip up something delicious together!
+        </p>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+
+    <% if(msgSubmitObj != '') { %>
+        <div class="col-8 alert alert-info" role="alert">
+            <%= msgSubmitObj %>
+        </div>
+    <% } %>
+
+    <% if(msgErrorsObj != '') { %>
+        <div class="col-8 alert alert-danger" role="alert">
+            <%= msgErrorsObj[0].message %>
+        </div>
+    <% } %>
+
+    <div class="col-8">
+        <form action="/contact" enctype="multipart/form-data" method="POST">
+            <div class="row g-3">
+                <div class="row-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" id="email" class="form-control">
+                </div>
+                <div class="row-12">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" name="name" id="name" class="form-control">
+                </div>
+                <div class="row-12">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea name="message" class="form-control" id="message" cols="30" rows="4"></textarea>
+                </div>
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-dark submit-button">Send Message</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

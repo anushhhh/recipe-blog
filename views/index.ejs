@@ -133,13 +133,38 @@
 <!--
     Submit Section
 -->
-<section class="px-4 py-5 my-5 text-center">
+<section class="px-4 py-4 my-4 text-center publish-recipe">
     <img src="/img/publish-recipe.png" class="d-block mx-auto mb-4 img-fluid" alt="Publish your recipe today" width="466" height="108" loading="lazy">
-    <h1 class="display-6 fw-bold">Publish your recipe for FREE today</h1>
+    <h2 class="display-6 fw-bold">Publish your recipe for FREE today</h2>
     <div class="col-lg-8 mx-auto">
         <p class="lead mb-4">Publish your recipe for thousands of people for free.</p>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
             <a href="/submit-recipe" class="btn btn-primary btn-dark btn-lg">Submit Recipe</a>
+        </div>
+    </div>
+</section>
+
+<section id="newsletter" class="px-4 py-5 my-5 text-center">
+    <div class="row justify-content-center">
+        <% if(msgSubmitObj != '') { %>
+            <div class="col-6 alert alert-info" role="alert">
+                <%= msgSubmitObj %>
+            </div>
+        <% } %>
+
+        <% if(msgErrorsObj != '') { %>
+            <div class="col-6 alert alert-info" role="alert">
+                <%= msgErrorsObj[0].message %>
+            </div>
+        <% } %>
+
+        <div id="newsletter-section">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Indulge in heartwarming recipes for a delightful culinary journey!</p>
+            <form action="/newsletter" enctype="multipart/form-data" method="POST">
+            <input class="form-label email-input" type="email" name="email" placeholder="Enter your email" required><br>
+            <button id="subscribe-button" type="submit" class="btn btn-dark subs-button">Subscribe Now!</button>
+            </form>
         </div>
     </div>
 </section>
